@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Dancing+Script&family=Great+Vibes&family=Playfair+Display&family=Raleway&family=Montserrat&family=Roboto&family=Open+Sans&family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Dancing+Script&family=Great+Vibes&family=Playfair+Display&family=Raleway&family=Montserrat&family=Roboto&family=Open+Sans&family=Merriweather&display=swapfamily=Inspiration&family=My+Soul&family=Neonderthaw&family=Parisienne&family=Petemoss&display=swap');
 
 body {
     margin: 0;
@@ -76,8 +76,8 @@ main {
     color: white;
     font-size: 10vw;
     font-weight: bold;
-    font-family: sans-serif;
-    text-transform: uppercase;
+    font-family: Neonderthaw;
+    text-transform: capitalize;
     position: relative;
     user-select: none;
     text-shadow: 
@@ -86,6 +86,25 @@ main {
     0 0 0.9375rem rgba(255, 192, 203, 0.5),
     0 0 1.25rem rgba(255, 192, 203, 0.5),
     0 0 1.5625rem rgba(255, 192, 203, 0.5);
+    padding: 1rem;
+}
+
+.text-the {
+    background-color: black;
+    color: white;
+    font-size: 8vw;
+    font-weight: regular;
+    font-family: monospace;
+    text-transform: capitalize;
+    position: relative;
+    user-select: none;
+    text-shadow: 
+    0 0 0.3125rem rgba(255, 192, 203, 0.5), /* Rose Gold */
+    0 0 0.625rem rgba(255, 192, 203, 0.5),
+    0 0 0.9375rem rgba(255, 192, 203, 0.5),
+    0 0 1.25rem rgba(255, 192, 203, 0.5),
+    0 0 1.5625rem rgba(255, 192, 203, 0.5);
+    padding: 1rem;
 }
 
 .spotlight-save {
@@ -131,23 +150,23 @@ main {
     0 0 1.5625rem rgba(192, 192, 192, 0.5);
   }
   
-  .spotlight-date {
+.spotlight-date {
     position: absolute;
     top: -100%;
     left: -100%;
     right: 0;
     bottom: 0;
     background: 
-      radial-gradient(
-        circle,
-        rgba(192, 192, 192, 0.8), /* Silver */
-        transparent 25%
-      ) center / 25% 25%,
-      radial-gradient(
-        circle,
-        rgba(192, 192, 192, 0.5), /* Silver */
-        black 25%
-      ) center / 12.5% 12.5%;
+    radial-gradient(
+    circle,
+    rgba(192, 192, 192, 0.8), /* Silver */
+    transparent 25%
+    ) center / 25% 25%,
+    radial-gradient(
+    circle,
+    rgba(192, 192, 192, 0.5), /* Silver */
+    black 25%
+    ) center / 12.5% 12.5%;
     animation: light 5s linear infinite;
     mix-blend-mode: color-dodge;
-  }
+}
