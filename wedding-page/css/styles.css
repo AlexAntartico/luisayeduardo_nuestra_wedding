@@ -1,144 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Dancing+Script&family=Great+Vibes&family=Playfair+Display&family=Raleway&family=Montserrat&family=Roboto&family=Open+Sans&family=Merriweather&display=swap');
+
 body {
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    width: 100vw;
-    background-color: #18191f;
-  }
-
-main {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    background-color: black;
 }
 
-.common-style {
-    font-family: 'Alex Brush', cursive;
-    font-size: 3.5rem;
-    font-style: normal;
-    font-weight: 400;
-    padding: 20px;
-    /* background-color: #f9f9f9; */
-    background-color: antiquewhite;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+/* Gold Shimmer definitions start here */
+.neon {
+    position: relative;
+    overflow: hidden;
 }
 
-.wedding-save-the-date {
-    font-size: 5rem;
+.text {
+    background-color: black;
+    color: white;
+    font-size: 180px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+    text-shadow: 
+        0 0 5px rgba(255, 215, 0, 0.5),
+        0 0 10px rgba(255, 215, 0, 0.5),
+        0 0 15px rgba(255, 215, 0, 0.5),
+        0 0 20px rgba(255, 215, 0, 0.5),
+        0 0 25px rgba(255, 215, 0, 0.5);
 }
 
-.wedding-names {
-    font-size: 3.5rem;
+.spotlight {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle,
+            rgba(255, 215, 0, 0.8), /* Golden color with transparency */
+            transparent 25%
+        ) center / 25% 25%,
+        radial-gradient(
+            circle,
+            rgba(255, 215, 0, 0.5), /* Golden color with transparency */
+            black 25%
+        ) center / 12.5% 12.5%;
+    animation: light 5s linear infinite;
+    mix-blend-mode: color-dodge;
 }
 
-.wedding-date {
-    font-family: "DM Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: thin;
-    font-size: 2.5rem;
-    color: #4B0082;
-}
-
-main .wedding-save-the-date:hover,
-main .wedding-names:hover {
-    transform: scale(1.5) translateY(-10px);
-    color: antiquewhite;
-}
-
-.bungee-inline {
-    font-family: 'Bungee Inline', cursive;
-    font-size: 2rem;
-    color: #333333;
-}
-
-.bungee-shade {
-    font-family: 'Bungee Shade', cursive;
-    font-size: 2rem;
-    color: #333333;
-}
-
-.bungee-tint {
-    font-family: 'Bungee Tint', cursive;
-    font-size: 2rem;
-    color: #333333;
-}
-
-.dm-sans {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 2rem;
-    color: #333333;
-}
-
-.doto {
-    font-family: 'Doto', sans-serif;
-    font-size: 2rem;
-    color: #333333;
-}
-
-.faster-one {
-    font-family: 'Faster One', cursive;
-    font-size: 2rem;
-    color: #333333;
-}
-
-.fredericka-the-great {
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 2rem;
-    color: #333333;
-}
-
-.monoton {
-    font-family: 'Monoton', cursive;
-    font-size: 2rem;
-    color: #333333;
-}
-
-.mrs-saint-delafield {
-    font-family: 'Mrs Saint Delafield', cursive;
-    font-size: 2rem;
-    color: #333333;
-}
-
-.zen-dots {
-    font-family: 'Zen Dots', cursive;
-    font-size: 2rem;
-    color: #333333;
-}
-
-.zilla-slab-highlight {
-    font-family: 'Zilla Slab Highlight', cursive;
-    font-size: 2rem;
-    color: #333333;
-}
-
-
-
-.text-effect {
-    font-size: 8rem;
-    color: #fff;
-    box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
-      2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
-      inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
-      inset 2px 2px 10px #00000080;
-    border-radius: 29px;
-    padding: 11px 19px;
-    margin: 0 40px;
-    animation: animate 5s linear infinite;
-    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
-      0 0 200px #0072ff;
-  }
-  
-  @keyframes animate {
-    from {
-      filter: hue-rotate(0deg);
-    }
+@keyframes light {
     to {
-      filter: hue-rotate(360deg);
+        transform: translate(50%, 50%);
     }
-  }
+}
+
+/* Gold Shimmer definitions end here */
