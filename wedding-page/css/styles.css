@@ -71,11 +71,6 @@ main {
 /* Gold Shimmer definitions end here */
 /* Save the date definitions start here */
 
-.neon {
-    position: relative;
-    overflow: hidden;
-}
-
 .text-save {
     background-color: black;
     color: white;
@@ -114,11 +109,45 @@ main {
     mix-blend-mode: color-dodge;
 }
 
-@keyframes light {
-    to {
-        transform: translate(50%, 50%);
-    }
-}
 
 
 /* Save the date definitions end here */
+
+/* Wedding date definitions start here */
+.text-date {
+    background-color: black;
+    color: white;
+    font-size: 6vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+    text-shadow: 
+    0 0 0.3125rem rgba(192, 192, 192, 0.5), /* Silver */
+    0 0 0.625rem rgba(192, 192, 192, 0.5),
+    0 0 0.9375rem rgba(192, 192, 192, 0.5),
+    0 0 1.25rem rgba(192, 192, 192, 0.5),
+    0 0 1.5625rem rgba(192, 192, 192, 0.5);
+  }
+  
+  .spotlight-date {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(
+        circle,
+        rgba(192, 192, 192, 0.8), /* Silver */
+        transparent 25%
+      ) center / 25% 25%,
+      radial-gradient(
+        circle,
+        rgba(192, 192, 192, 0.5), /* Silver */
+        black 25%
+      ) center / 12.5% 12.5%;
+    animation: light 5s linear infinite;
+    mix-blend-mode: color-dodge;
+  }
