@@ -14,7 +14,9 @@
     <header></header>
     <main>
       <div class="neon overlay">
-        <span class="text-save temporary-element">Save The Date</span>
+        <span class="text-save temporary-element"><p>Save</p></span>
+        <span class="text-save temporary-element"><p>The</p></span>
+        <span class="text-save temporary-element"><p>Date</p></span>
         <span class="gradient"></span>
       </div>
       <div class="neon">
@@ -31,6 +33,12 @@
 
     </main>
     <footer></footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+          document.querySelector('.neon.overlay').classList.add('fade-out');
+        }, 5000); // 5000 milliseconds = 5 seconds
+      });
+    </script>
   </body>
 </html>
-
