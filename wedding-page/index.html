@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
   </head>
   <body>
     <header></header>
     <main>
-      <div class="neon overlay">
-        <span class="text-save temporary-element">Save The Date</span>
-        <span class="gradient"></span>
+      <div class="neon overlay text-save">
+        <div>save</div>
+        <div>the</div>
+        <div>date</div>
       </div>
       <div class="neon">
         <span class="text" data-text="Luisa & Eduardo">Luisa & Eduardo</span>
@@ -31,6 +30,12 @@
 
     </main>
     <footer></footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+          document.querySelector('.neon.overlay').classList.add('fade-out');
+        }, 5000); // 5000 milliseconds = 5 seconds
+      });
+    </script>
   </body>
 </html>
-
