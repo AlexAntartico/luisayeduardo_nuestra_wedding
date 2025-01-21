@@ -90,18 +90,37 @@ main {
 .text-save {
   background-color: #000;
   color: #fff;
-  font-size: 10vw;
-  font-weight: bold;
-  font-family: Monoton;
+  font: 10vw Monoton;
   text-transform: capitalize;
   position: relative;
   user-select: none;
-  text-shadow: 
-    0 0 0.3125rem rgba(255, 192, 203, 0.5),
-    0 0 0.625rem rgba(255, 192, 203, 0.5),
-    0 0 0.9375rem rgba(255, 192, 203, 0.5),
-    0 0 1.25rem rgba(255, 192, 203, 0.5),
-    0 0 1.5625rem rgba(255, 192, 203, 0.5);
+  text-decoration: none;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon1 {
+  from {
+    text-shadow:
+      0 0 0.625rem #fff,
+      0 0 1.25rem #fff,
+      0 0 1.875rem #fff,
+      0 0 2.5rem #ff1177,
+      0 0 4.375rem #ff1177,
+      0 0 5rem #ff1177,
+      0 0 6.25rem #ff1177,
+      0 0 9.375rem #ff1177;
+  }
+  to {
+    text-shadow:
+      0 0 0.3125rem #fff,
+      0 0 0.625rem #fff,
+      0 0 0.9375rem #fff,
+      0 0 1.25rem #ff1177,
+      0 0 2.1875rem #ff1177,
+      0 0 2.5rem #ff1177,
+      0 0 3.125rem #ff1177,
+      0 0 4.6875rem #ff1177;
+  }
 }
 
 .spotlight-save {
