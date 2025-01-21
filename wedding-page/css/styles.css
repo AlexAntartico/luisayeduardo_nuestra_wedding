@@ -1,15 +1,21 @@
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Kristi&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Great+Vibes&family=Kristi&family=Monoton&display=swap');
 
 /* Global styles */
+:root {
+  --background-color: #000;
+  --text-color: #fff;
+  --font-size: 16px;
+}
+
 body {
   margin: 0;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000;
-  font-size: 16px;
+  background-color: var(--background-color);
+  font-size: var(--font-size);
 }
 
 main {
@@ -35,7 +41,7 @@ main {
   width: 100%;
   height: 100%;
   z-index: 1000;
-  background: #000;
+  background: var(--background-color);
   transition: opacity 1s ease-out;
   display: flex;
   flex-direction: column;
@@ -51,21 +57,24 @@ main {
 
 /* Text styles */
 .text {
-  background-color: #000;
-  color: #fff;
-  font-size: 10vw;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 9vw;
   font-weight: bold;
-  font-family: Cormorant Garamond;
+  font-family: 'Great Vibes';
   text-transform: capitalize;
   position: relative;
   user-select: none;
-  text-shadow: 
+  text-shadow:
     0 0 0.3125rem rgba(255, 215, 0, 0.5),
     0 0 0.625rem rgba(255, 215, 0, 0.5),
     0 0 0.9375rem rgba(255, 215, 0, 0.5),
     0 0 1.25rem rgba(255, 215, 0, 0.5),
     0 0 1.5625rem rgba(255, 215, 0, 0.5);
+  padding: 0.5em; /* Add padding to avoid clipping */
+  margin: 0;
 }
+
 
 .spotlight {
   position: absolute;
@@ -73,9 +82,9 @@ main {
   left: -100%;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(circle, rgba(255, 215, 0, 0.8), transparent 25%) center / 25% 25%,
-    radial-gradient(circle, rgba(255, 215, 0, 0.5), #000 25%) center / 12.5% 12.5%;
+    radial-gradient(circle, rgba(255, 215, 0, 0.5), var(--background-color) 25%) center / 12.5% 12.5%;
   animation: light 5s linear infinite;
   mix-blend-mode: color-dodge;
 }
@@ -88,8 +97,8 @@ main {
 
 /* Save the date styles */
 .text-save {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font: 10vw Monoton;
   text-transform: capitalize;
   position: relative;
@@ -101,9 +110,9 @@ main {
 @keyframes neon1 {
   from {
     text-shadow:
-      0 0 0.625rem #fff,
-      0 0 1.25rem #fff,
-      0 0 1.875rem #fff,
+      0 0 0.625rem var(--text-color),
+      0 0 1.25rem var(--text-color),
+      0 0 1.875rem var(--text-color),
       0 0 2.5rem #ff1177,
       0 0 4.375rem #ff1177,
       0 0 5rem #ff1177,
@@ -112,9 +121,9 @@ main {
   }
   to {
     text-shadow:
-      0 0 0.3125rem #fff,
-      0 0 0.625rem #fff,
-      0 0 0.9375rem #fff,
+      0 0 0.3125rem var(--text-color),
+      0 0 0.625rem var(--text-color),
+      0 0 0.9375rem var(--text-color),
       0 0 1.25rem #ff1177,
       0 0 2.1875rem #ff1177,
       0 0 2.5rem #ff1177,
@@ -129,24 +138,24 @@ main {
   left: -100%;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(circle, rgba(255, 192, 203, 0.8), transparent 25%) center / 25% 25%,
-    radial-gradient(circle, rgba(255, 192, 203, 0.5), #000 25%) center / 12.5% 12.5%;
+    radial-gradient(circle, rgba(255, 192, 203, 0.5), var(--background-color) 25%) center / 12.5% 12.5%;
   animation: light 5s linear infinite;
   mix-blend-mode: color-dodge;
 }
 
 /* Wedding date styles */
 .text-date {
-  background-color: #000;
-  color: #fff;
-  font-size: 6vw;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 5vw;
   font-weight: regular;
   font-family: Cinzel;
   text-transform: capitalize;
   position: relative;
   user-select: none;
-  text-shadow: 
+  text-shadow:
     0 0 0.3125rem rgba(192, 192, 192, 0.5),
     0 0 0.625rem rgba(192, 192, 192, 0.5),
     0 0 0.9375rem rgba(192, 192, 192, 0.5),
@@ -160,9 +169,28 @@ main {
   left: -100%;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(circle, rgba(192, 192, 192, 0.8), transparent 25%) center / 25% 25%,
-    radial-gradient(circle, rgba(192, 192, 192, 0.5), #000 25%) center / 12.5% 12.5%;
+    radial-gradient(circle, rgba(192, 192, 192, 0.5), var(--background-color) 25%) center / 12.5% 12.5%;
   animation: light 5s linear infinite;
   mix-blend-mode: color-dodge;
+}
+
+.neon.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: #000;
+  transition: opacity 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
 }
